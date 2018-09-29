@@ -1,0 +1,7 @@
+export const SET_TITLE = 'SET_TITLE'
+export const SET_SHOW_BACK = 'SET_SHOW_BACK'
+export const SET_SHOW_TITLE = 'SET_SHOW_TITLE'
+export const SET_SHOW_MORE = 'SET_SHOW_MORE'
+export const SET_SHOW_BOTTOM = 'SET_SHOW_BOTTOM'
+export const SET_USER = 'SET_USER'
+export const SET_TYPES = 'SET_TYPES'
