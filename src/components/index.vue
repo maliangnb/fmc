@@ -3,7 +3,7 @@
     <x-header :left-options="{showBack:showBack,backText:''}" :right-options="{showMore:showMore}" :title="title"
               v-show="showTitle">
     </x-header>
-    <div :style="{marginTop: distanceTop,marginBottom:distanceBottom}">
+    <div :style="{paddingTop: distanceTop,paddingBottom:distanceBottom}" class="main">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
@@ -58,7 +58,7 @@
 
 <style lang="less">
   #index {
-    height: 100%;
+      height: 100%;
     .vux-header {
       position: fixed;
       top: 0;
@@ -79,6 +79,10 @@
         font-size: 16px;
       }
     }
+      .main{
+          height: 100%;
+          box-sizing: border-box;
+      }
     .weui-tabbar {
       position: fixed;
       bottom: 0;

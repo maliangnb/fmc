@@ -13,29 +13,29 @@
         </div>
       </div>
       <grid :cols="5" :show-vertical-dividers="false" :show-lr-borders="false">
-        <grid-item link="">
+        <grid-item :link="{path:'/order?id='+'0' }">
+          <i class="iconfont icon-zhifu icon" slot="icon"></i>
+          <span slot="label">全部订单</span>
+        </grid-item>
+        <grid-item :link="{path:'/order?id='+'1' }">
           <i class="iconfont icon-zhifu icon" slot="icon"></i>
           <span slot="label">待支付</span>
         </grid-item>
-        <grid-item link="">
+        <grid-item :link="{path:'/order?id='+'2' }">
           <i class="iconfont icon-zhifu icon" slot="icon"></i>
-          <span slot="label">待支付</span>
+          <span slot="label">待发货</span>
         </grid-item>
-        <grid-item link="">
+        <grid-item :link="{path:'/order?id='+'3' }">
           <i class="iconfont icon-zhifu icon" slot="icon"></i>
-          <span slot="label">待支付</span>
+          <span slot="label">已发货</span>
         </grid-item>
-        <grid-item link="">
+        <grid-item :link="{path:'/order?id='+'4' }">
           <i class="iconfont icon-zhifu icon" slot="icon"></i>
-          <span slot="label">待支付</span>
-        </grid-item>
-        <grid-item link="">
-          <i class="iconfont icon-zhifu icon" slot="icon"></i>
-          <span slot="label">待支付</span>
+          <span slot="label">已收件</span>
         </grid-item>
         <p class="tra"></p>
       </grid>
-      
+
     </div>
 </template>
 

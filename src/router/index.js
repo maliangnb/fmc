@@ -59,6 +59,54 @@ export default new Router({
                         showBottom: true
                     },
                 },
+                {
+                    path: 'order',
+                    name: 'order',
+                    component: () => import('@/components/order/order'),
+                    meta: {
+                        title: '订单管理',
+                        showTitle: true,
+                        showBack: true,
+                        showMore: false,
+                        showBottom: true
+                    },
+                },
+                {
+                    path: 'proDetail',
+                    name: 'proDetail',
+                    component: () => import('@/components/proDetail/proDetail'),
+                    meta: {
+                        title: '产品详情',
+                        showTitle: true,
+                        showBack: true,
+                        showMore: false,
+                        showBottom: true
+                    },
+                },
+                {
+                    path: 'indexlist',
+                    name: 'indexlist',
+                    component: () => import('@/components/indexlist/indexlist'),
+                    meta: {
+                        title: 'indexlist',
+                        showTitle: true,
+                        showBack: true,
+                        showMore: false,
+                        showBottom: true
+                    },
+                },
+                {
+                    path: 'canvas',
+                    name: 'canvas',
+                    component: () => import('@/components/drawc/drawc'),
+                    meta: {
+                        title: 'canvas',
+                        showTitle: true,
+                        showBack: true,
+                        showMore: false,
+                        showBottom: true
+                    },
+                },
             ]
         },
         {
