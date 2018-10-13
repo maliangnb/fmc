@@ -9,8 +9,7 @@
     export default {
         name: 'drawc',
         data () {
-            return {
-            }
+            return {}
         },
         created () {
             // this.sun = new Image()
@@ -71,9 +70,10 @@
                 const ctx = document.getElementById('canvas').getContext('2d')
                 const sec = now.getSeconds()
                 const min = now.getMinutes()
-                const hour = now.getHours()
+                let hour = now.getHours()
+                hour = hour >= 12 ? hour - 12 : hour
                 console.log(ctx)
-                ctx.clearRect(0,0,300,300)
+                ctx.clearRect(0, 0, 300, 300)
                 ctx.strokeStyle = 'black'
                 ctx.save()
                 ctx.arc(150, 150, 100, 0, Math.PI * 2, false)
@@ -84,10 +84,11 @@
                 ctx.translate(150, 150)
                 //时钟点刻度
                 for (let i = 0; i < 12; i++) {
+                    ctx.beginPath()
+                    ctx.rotate(Math.PI / 6)
                     ctx.moveTo(96, 0)
                     ctx.lineTo(86, 0)
                     ctx.stroke()
-                    ctx.rotate(Math.PI / 6)
                 }
                 //时钟分刻度
                 ctx.restore()
@@ -95,10 +96,11 @@
                 ctx.lineWidth = 1.5
                 ctx.translate(150, 150)
                 for (let i = 0; i < 60; i++) {
+                    ctx.beginPath()
+                    ctx.rotate(Math.PI * 2 / 60)
                     ctx.moveTo(96, 0)
                     ctx.lineTo(92, 0)
                     ctx.stroke()
-                    ctx.rotate(Math.PI * 2 / 60)
                 }
                 //秒钟旋转
                 ctx.restore()
@@ -118,7 +120,7 @@
                 ctx.lineWidth = 2.5
                 ctx.lineCap = 'square'
                 ctx.save()
-                ctx.translate(150,150)
+                ctx.translate(150, 150)
                 ctx.rotate((Math.PI * 2 / 3600) * sec + (Math.PI * 2 / 60) * min)
                 ctx.beginPath()
                 ctx.moveTo(70, 0)
@@ -130,8 +132,8 @@
                 ctx.lineWidth = 3.5
                 ctx.lineCap = 'square'
                 ctx.save()
-                ctx.translate(150,150)
-                ctx.rotate((Math.PI * 2 / 216000) * sec + (Math.PI * 2 / 3600) * min + (Math.PI * 2 / 60) * hour)
+                ctx.translate(150, 150)
+                ctx.rotate((Math.PI / 21600) * sec + (Math.PI * 2 / 720) * min + (Math.PI * 2 / 12) * hour)
                 ctx.beginPath()
                 ctx.moveTo(50, 0)
                 ctx.lineTo(-5, 0)
