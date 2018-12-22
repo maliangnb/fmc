@@ -3,13 +3,18 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import FastClick from 'fastclick'
+// import FastClick from 'fastclick'
 import {ConfirmPlugin} from 'vux'
+import {Lazyload, Toast} from 'vant'
 import store from './store/index'
 import './routeGuard'
 
-FastClick.attach(document.body)
+// FastClick.attach(document.body)
 Vue.use(ConfirmPlugin)
+Vue.use(Lazyload, {
+    loading: require('common/img/img_load.png')
+})
+Vue.use(Toast)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

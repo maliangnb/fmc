@@ -35,7 +35,6 @@
         </grid-item>
         <p class="tra"></p>
       </grid>
-
     </div>
 </template>
 
@@ -44,6 +43,10 @@
   import '@/common/fonts/iconfont.css'
   export default {
       name: 'member',
+      data() {
+          return {
+          }
+      },
       components: {
           Grid, GridItem
       }

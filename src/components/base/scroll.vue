@@ -217,11 +217,10 @@
                 })
             },
             _reboundPullDown () {
-                const _this = this
                 const {stopTime = 600} = this.pullDownRefresh
                 return new Promise((resolve) => {
                     setTimeout(() => {
-                        _this.scroll.finishPullDown()
+                        this.scroll.finishPullDown()
                         resolve()
                     }, stopTime)
                 })
@@ -232,7 +231,6 @@
                 }, this.scroll.options.bounceTime)
             },
             forceUpdate () {
-                const _this = this
                 if (this.pullDownRefresh && this.isPullingDown) {
                     this.isPullingDown = false
                     this._reboundPullDown().then(() => {
@@ -240,10 +238,10 @@
                     })
                 } else if (this.pullUpLoad && this.ispullUpLoad) {
                     this.ispullUpLoad = false
-                    _this.scroll.finishPullUp()
-                    _this.refresh()
+                    this.scroll.finishPullUp()
+                    this.refresh()
                 } else {
-                    _this.refresh()
+                    this.refresh()
                 }
             },
         },

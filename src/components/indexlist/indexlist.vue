@@ -230,17 +230,17 @@
                 }
             },
             clickitem (index) {
-                this.$refs.scroll.scroll.scrollToElement(this.$refs.lists.children[index], 100)
+                this.$refs.scroll.scrollToElement(this.$refs.lists.children[index], 100)
                 this.scrollY = this.$refs.scroll.scroll.y
                 this.currentIndex = index
-                this.$refs.navtitle.scroll.scrollToElement(this.$refs.navlist.children[index], 100)
+                this.$refs.navtitle.scrollToElement(this.$refs.navlist.children[index], 100)
             },
         },
         watch: {
             scrollY (newY) {
                 if (newY > 0) {
                     this.currentIndex = 0
-                    this.$refs.navtitle.scroll.scrollToElement(this.$refs.navlist.children[this.currentIndex], 100)
+                    this.$refs.navtitle.scrollToElement(this.$refs.navlist.children[this.currentIndex], 100)
                     return
                 }
                 for (let i = 0; i < this.listheight.length; i++) {
@@ -248,7 +248,7 @@
                     const height2 = this.listheight[i + 1]
                     if (-newY >= height1 && -newY <= height2) {
                         this.currentIndex = i + 1
-                        this.$refs.navtitle.scroll.scrollToElement(this.$refs.navlist.children[this.currentIndex], 100)
+                        this.$refs.navtitle.scrollToElement(this.$refs.navlist.children[this.currentIndex], 100)
                     }
                 }
             }

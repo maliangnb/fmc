@@ -22,6 +22,9 @@ const mutations = {
     [types.SET_TYPES] (state, types) {
         state.types = types
     },
+    [types.SET_IS_LOGIN] (state, flag) {
+        state.isLogin = flag
+    },
 }
 
 export default mutations

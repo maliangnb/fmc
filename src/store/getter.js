@@ -6,3 +6,4 @@ export const showBack = (showBack) => state.showBack
 export const showMore = (showMore) => state.showMore
 export const showBottom = (showBottom) => state.showBottom
 export const showTitle = (showTitle) => state.showTitle
+export const isLogin = (isLogin) => state.isLogin

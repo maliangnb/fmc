@@ -1,6 +1,5 @@
 <template>
     <div id="agent">
-
     </div>
 </template>
 

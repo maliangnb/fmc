@@ -24,7 +24,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: 'agent',
+                    path: '/agent',
                     name: 'agent',
                     component: () => import('@/components/agent/agent'),
                     meta: {
@@ -36,7 +36,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: 'shopCar',
+                    path: '/shopCar',
                     name: 'shopCar',
                     component: () => import('@/components/shopCar/shopCar'),
                     meta: {
@@ -48,7 +48,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: 'member',
+                    path: '/member',
                     name: 'member',
                     component: () => import('@/components/member/member'),
                     meta: {
@@ -60,7 +60,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: 'order',
+                    path: '/order',
                     name: 'order',
                     component: () => import('@/components/order/order'),
                     meta: {
@@ -72,7 +72,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: 'proDetail',
+                    path: '/proDetail',
                     name: 'proDetail',
                     component: () => import('@/components/proDetail/proDetail'),
                     meta: {
@@ -84,7 +84,7 @@ export default new Router({
                     },
                 },
                 {
-                    path: 'indexlist',
+                    path: '/indexlist',
                     name: 'indexlist',
                     component: () => import('@/components/indexlist/indexlist'),
                     meta: {
@@ -96,11 +96,47 @@ export default new Router({
                     },
                 },
                 {
-                    path: 'canvas',
-                    name: 'canvas',
-                    component: () => import('@/components/drawc/drawc'),
+                    path: '/rain',
+                    name: 'rain',
+                    component: () => import('@/components/drawc/rain'),
                     meta: {
-                        title: 'canvas',
+                        title: 'rain',
+                        showTitle: true,
+                        showBack: true,
+                        showMore: false,
+                        showBottom: true
+                    },
+                },
+                {
+                    path: '/fireWork',
+                    name: 'fireWork',
+                    component: () => import('@/components/drawc/fireWork'),
+                    meta: {
+                        title: 'canvas-fireWork',
+                        showTitle: true,
+                        showBack: true,
+                        showMore: false,
+                        showBottom: true
+                    },
+                },
+                {
+                    path: '/visualize',
+                    name: 'visualize',
+                    component: () => import('@/components/drawc/visualize'),
+                    meta: {
+                        title: 'canvas-visualize',
+                        showTitle: true,
+                        showBack: true,
+                        showMore: false,
+                        showBottom: true
+                    },
+                },
+                {
+                    path: '/promise',
+                    name: 'promise',
+                    component: () => import('@/components/promise/promise'),
+                    meta: {
+                        title: 'promise对象',
                         showTitle: true,
                         showBack: true,
                         showMore: false,
@@ -115,7 +151,7 @@ export default new Router({
             component: () => import('@/components/error')
         },
         {
-            path: 'login',
+            path: '/login',
             name: 'login',
             component: () => import('@/components/login/login'),
         }
